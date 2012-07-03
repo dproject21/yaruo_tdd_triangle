@@ -6,12 +6,12 @@ class TC_Triangle < Test::Unit::TestCase
     @triangle = Triangle.new
   end
   def test_equilateral
-    @triangle = Triangle.new
     @triangle.a = 1
     @triangle.b = 1
     @triangle.c = 1
     assert @triangle.is_equilteral_triangle?, 'should be passed.'
-   
+    assert !@triangle.is_scalene_triangle?, 'triangle!'
+
     @triangle.a = 2
     @triangle.b = 1
     @triangle.c = 1
