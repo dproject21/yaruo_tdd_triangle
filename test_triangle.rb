@@ -41,6 +41,24 @@ class TC_Triangle < Test::Unit::TestCase
     @triangle.c = nil
     assert !@triangle.is_equilteral_triangle?, 'nil?'
     assert !@triangle.is_isoscales_triangle?, 'not triangle!'
+
+    @triangle.a = nil
+    @triangle.b = 1
+    @triangle.c = 1
+    assert !@triangle.is_equilteral_triangle?, 'nil?'
+    assert !@triangle.is_isoscales_triangle?, 'not triangle!'
+
+    @triangle.a = 1
+    @triangle.b = nil
+    @triangle.c = 1
+    assert !@triangle.is_equilteral_triangle?, 'nil?'
+    assert !@triangle.is_isoscales_triangle?, 'not triangle!'
+
+    @triangle.a = 1
+    @triangle.b = 1
+    @triangle.c = nil
+    assert !@triangle.is_equilteral_triangle?, 'nil?'
+    assert !@triangle.is_isoscales_triangle?, 'not triangle!'
   end
   def test_isoscales_triangle
     @triangle.a = 2
