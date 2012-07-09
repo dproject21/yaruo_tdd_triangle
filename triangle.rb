@@ -13,6 +13,10 @@ class Triangle
     return is_triangle? && !is_isoscales_triangle?
   end
   def preCondition?
+    if (@a.nil? || @b.nil? || @c.nil?) 
+      return false
+    end
+    
     unless [@a,@b,@c].find{|n| n.is_a?(Numeric) && n > 0} 
       false
     else
